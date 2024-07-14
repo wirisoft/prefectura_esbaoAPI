@@ -1,0 +1,108 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="esbao_A4" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fc61a360-2ac9-4289-8986-3ca5ef2d39a2">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="nombre_citatorio" class="java.lang.String"/>
+    <parameter name="asunto" class="java.lang.String"/>
+    <parameter name="hora_citatorio" class="java.sql.Time"/>
+    <parameter name="fecha_citatorio" class="java.sql.Date"/>
+    <parameter name="departamento" class="java.lang.String"/>
+    <parameter name="dia_citatorio" class="java.lang.Integer"/>
+    <parameter name="mes_citatorio" class="java.lang.String"/>
+    <parameter name="ano_citatorio" class="java.lang.String"/>
+    <parameter name="imageCitatorio" class="java.lang.String"/>
+    <query language="sql"><![CDATA[]]></query>
+    <background splitType="Stretch"/>
+    <title height="210" splitType="Stretch">
+        <element kind="staticText" uuid="a67951c5-8d43-442f-ba27-6429555f9691" x="150" y="64" width="239" height="75" fontName="Serif" fontSize="14.0" hTextAlign="Center">
+            <paragraph lineSpacingSize="1.0"/>
+            <text><![CDATA[ESBAO
+BACHILLERES ARTES Y OFICIOS]]></text>
+        </element>
+        <element kind="staticText" uuid="f06ad065-ce89-45ad-92a2-5e4b0332d63b" x="149" y="130" width="240" height="70" fontName="Serif" fontSize="14.0" hTextAlign="Center">
+            <text><![CDATA[CITATORIO
+PADRE DE FAMILIA O TUTOR]]></text>
+        </element>
+        <element kind="image" uuid="071a02f7-ecf4-444b-a635-f76008d374a1" x="0" y="2" width="149" height="160">
+            <expression><![CDATA[$P{imageCitatorio} + "logoesbao.png"]]></expression>
+        </element>
+    </title>
+    <pageHeader height="112" splitType="Stretch">
+        <element kind="staticText" uuid="ecd91aa2-a1e9-40c8-804a-7efbe380a2bd" x="65" y="33" width="125" height="26" fontName="Serif" fontSize="12.0">
+            <text><![CDATA[H. CORDOBA, VER. A ]]></text>
+        </element>
+        <element kind="staticText" uuid="57725cf4-33ea-4c3f-868e-4291f83d2423" x="65" y="78" width="104" height="26" fontName="Serif" fontSize="12.0">
+            <text><![CDATA[Sr. Padre de Familia:]]></text>
+            <property name="com.jaspersoft.studio.unit.x" value="px"/>
+        </element>
+        <element kind="staticText" uuid="b39625fc-ca3c-4a62-8955-a2715e25ea83" x="282" y="33" width="20" height="26" fontName="Serif" fontSize="12.0">
+            <text><![CDATA[DE]]></text>
+        </element>
+        <element kind="staticText" uuid="0f091ed0-ea15-4172-abdf-80e7586d10b2" x="401" y="33" width="20" height="26" fontName="Serif" fontSize="12.0">
+            <text><![CDATA[DE]]></text>
+        </element>
+        <element kind="textField" uuid="e098b1f3-458e-4c03-93de-5992b6c2abb4" x="177" y="78" width="232" height="26" fontName="Serif" fontSize="12.0">
+            <expression><![CDATA[$P{nombre_citatorio}]]></expression>
+            <property name="com.jaspersoft.studio.unit.y" value="px"/>
+        </element>
+        <element kind="textField" uuid="37c635ba-b4df-450e-ba18-9e00a6dcd399" x="188" y="33" width="91" height="26" fontName="Serif" fontSize="12.0">
+            <expression><![CDATA[$P{dia_citatorio}]]></expression>
+            <property name="com.jaspersoft.studio.unit.y" value="px"/>
+        </element>
+        <element kind="textField" uuid="b2c2d329-4455-4510-8fbd-c96e54d03735" x="305" y="33" width="92" height="26" fontName="Serif" fontSize="12.0">
+            <expression><![CDATA[$P{mes_citatorio}]]></expression>
+            <property name="com.jaspersoft.studio.unit.y" value="px"/>
+        </element>
+        <element kind="textField" uuid="e8d50c62-a8e5-4aa2-9782-389b7f2293ab" x="422" y="33" width="100" height="30" fontName="Serif" fontSize="12.0">
+            <expression><![CDATA[$P{ano_citatorio}]]></expression>
+            <property name="com.jaspersoft.studio.unit.y" value="px"/>
+        </element>
+    </pageHeader>
+    <columnHeader height="109" splitType="Stretch">
+        <element kind="staticText" uuid="3a6f749e-0216-479d-832e-09bf83cbf46c" x="65" y="38" width="344" height="59" fontName="Serif" fontSize="12.0">
+            <text><![CDATA[Debido a nuestra preocupación por mejorar  el desempeño integral de nuestros alumnos, solicitamos su presencia para tratar el asunto indicado.]]></text>
+        </element>
+    </columnHeader>
+    <detail>
+        <band height="263" splitType="Stretch">
+            <element kind="staticText" uuid="6c459b02-1934-4cb3-bf74-61285d3d1483" x="219" y="-2" width="100" height="30" fontName="Serif" fontSize="12.0" hTextAlign="Center">
+                <text><![CDATA[ASUNTO]]></text>
+            </element>
+            <element kind="staticText" uuid="225a6bae-ab26-43e9-b29b-c02169f83959" x="65" y="40" width="100" height="19" fontName="Serif" fontSize="12.0">
+                <text><![CDATA[Fecha de cita]]></text>
+            </element>
+            <element kind="staticText" uuid="756bceb6-97bf-467f-8efc-b3e254ada763" x="65" y="103" width="100" height="16" fontName="Serif" fontSize="12.0">
+                <text><![CDATA[Departamento]]></text>
+            </element>
+            <element kind="staticText" uuid="82e788d4-d1c9-4bf1-9042-20a90841d155" x="65" y="160" width="100" height="19" fontName="Serif" fontSize="12.0">
+                <text><![CDATA[Hora]]></text>
+            </element>
+            <element kind="staticText" uuid="e5145291-4508-44c4-93b3-3c9e628046cd" x="206" y="160" width="126" height="30" fontName="Serif" fontSize="12.0" hTextAlign="Center">
+                <text><![CDATA[ATENTAMENTE]]></text>
+            </element>
+            <element kind="textField" uuid="5d67fde2-eb2d-46f6-931f-5b17a8e2bef3" x="307" y="72" width="100" height="19" fontName="Serif" fontSize="12.0">
+                <expression><![CDATA[$P{asunto}]]></expression>
+            </element>
+            <element kind="textField" uuid="66e0519f-1bfe-46b9-bb00-ea66422f023f" x="65" y="189" width="100" height="20" fontName="Serif" fontSize="12.0">
+                <expression><![CDATA[$P{hora_citatorio}]]></expression>
+                <property name="com.jaspersoft.studio.unit.x" value="px"/>
+            </element>
+            <element kind="textField" uuid="a13e717c-156c-407e-a1c5-f34501a30795" x="65" y="72" width="100" height="19" fontName="Serif" fontSize="12.0">
+                <expression><![CDATA[$P{fecha_citatorio}]]></expression>
+                <property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+            </element>
+            <element kind="textField" uuid="1dc0e592-f7af-4c2a-9074-fd84bfca6953" x="65" y="130" width="100" height="19" fontName="Serif" fontSize="12.0">
+                <expression><![CDATA[$P{departamento}]]></expression>
+            </element>
+        </band>
+    </detail>
+    <columnFooter height="12" splitType="Stretch"/>
+    <pageFooter height="14" splitType="Stretch"/>
+    <summary height="63" splitType="Stretch">
+        <element kind="staticText" uuid="1e4585f7-aea9-404e-a187-c825f5dc4577" x="60" y="22" width="130" height="30" fontName="Serif" fontSize="12.0" hTextAlign="Left">
+            <text><![CDATA[Firma del Prefecto]]></text>
+        </element>
+        <element kind="staticText" uuid="d33b9dc1-5e79-4cb4-a81e-f6f5674cc162" x="350" y="22" width="100" height="30" fontName="Serif" fontSize="12.0" hTextAlign="Center">
+            <text><![CDATA[Firma del Tutor]]></text>
+        </element>
+    </summary>
+</jasperReport>
