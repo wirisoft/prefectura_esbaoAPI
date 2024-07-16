@@ -1,17 +1,13 @@
-version: '3'
+
 
 services:
   esbao:
     build:
-      context: .
+      context: ./esbao
       dockerfile: Dockerfile
-    mem_limit: 512m
-    image: openjdk:17-jdk-slim
     container_name: esbao-app
     ports:
       - "8080:8080"
-    volumes:
-      - ./build/libs:/app
     environment:
       - DB_URL=jdbc:postgresql://db:5432/esbao_bd
       - DB_USER_NAME=postgres
