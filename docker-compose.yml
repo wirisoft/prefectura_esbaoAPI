@@ -2,36 +2,38 @@ version: '3'
 
 services:
   esbao:
-    build: esbao               # Directorio donde se encuentra el Dockerfile de la aplicación
-    mem_limit: 512m            # Límite de memoria para el contenedor
-    image: openjdk:17-jdk-slim # Imagen base de Java 17
-    container_name: esbao-app  # Nombre del contenedor de la aplicación
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 512m
+    image: openjdk:17-jdk-slim
+    container_name: esbao-app
     ports:
-      - "8080:8080"            # Mapeo del puerto de la aplicación
+      - "8080:8080"
     volumes:
-      - ./esbao/build/libs:/app # Volumen para montar el directorio de artefactos de tu aplicación
+      - ./build/libs:/app
     environment:
-      - DB_URL=jdbc:postgresql://db:5432/esbao_bd  # URL de la base de datos PostgreSQL
-      - DB_USER_NAME=postgres                      # Usuario de la base de datos
-      - DB_PASSWORD=qwerty                         # Contraseña de la base de datos
-      - DB_JWT_PRIVATE=jwtKeys/private.key.pem     # Ruta de la clave privada JWT
-      - DB_JWT_PUBLIC=jwtKeys/public.key.pem       # Ruta de la clave pública JWT
-    restart: always            # Política de reinicio del contenedor
+      - DB_URL=jdbc:postgresql://db:5432/esbao_bd
+      - DB_USER_NAME=postgres
+      - DB_PASSWORD=qwerty
+      - DB_JWT_PRIVATE=jwtKeys/private.key.pem
+      - DB_JWT_PUBLIC=jwtKeys/public.key.pem
+    restart: always
     depends_on:
-      - db                     # Dependencia del servicio de base de datos
+      - db
 
   db:
-    image: postgres:latest     # Imagen de PostgreSQL
-    container_name: esbao-db   # Nombre del contenedor de la base de datos
+    image: postgres:latest
+    container_name: esbao-db
     ports:
-      - "5432:5432"            # Puerto expuesto de PostgreSQL
+      - "5432:5432"
     environment:
-      - POSTGRES_DB=esbao_bd   # Nombre de la base de datos
-      - POSTGRES_USER=postgres # Usuario de la base de datos
-      - POSTGRES_PASSWORD=qwerty # Contraseña de la base de datos
-    restart: always            # Política de reinicio del contenedor
+      - POSTGRES_DB=esbao_bd
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=qwerty
+    restart: always
     volumes:
-      - db-data:/var/lib/postgresql/data # Volumen para persistencia de datos de PostgreSQL
+      - db-data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "postgres", "-h", "localhost"]
       interval: 10s
@@ -39,4 +41,4 @@ services:
       retries: 5
 
 volumes:
-  db-data:                     # Definición del volumen para persistencia de datos de PostgreSQL
+  db-data:
