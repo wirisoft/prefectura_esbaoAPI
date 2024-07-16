@@ -1,10 +1,16 @@
-HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Ignorar la carpeta .git y .gitignore
+.git
+.gitignore
 
+# Ignorar la carpeta node_modules y dist
+node_modules
+dist
+
+# Ignorar todas las carpetas build excepto el archivo JAR especificado
+build/
+!esbao/build/libs/prefectura_esbao-0.0.1-SNAPSHOT.jar
+
+# Ignorar configuraciones específicas de STS, IntelliJ, NetBeans y VS Code
 ### STS ###
 .apt_generated
 .classpath
