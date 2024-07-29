@@ -9,9 +9,9 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - DB_URL=jdbc:postgresql://db:5432/esbao_bd
-      - DB_USER_NAME=postgres
-      - DB_PASSWORD=qwerty
+      - DB_URL=jdbc:postgresql://dpg-cqk125eehbks73ck503g-a.oregon-postgres.render.com:5432/esbao_db
+      - DB_USER_NAME=esbao_db_user
+      - DB_PASSWORD=KXdHsokGbqQK5fGdvYurj1s4b5hdekC2
       - DB_JWT_PRIVATE=jwtKeys/private.key.pem
       - DB_JWT_PUBLIC=jwtKeys/public.key.pem
     restart: always
@@ -25,8 +25,8 @@ services:
       - "5432:5432"
     environment:
       - POSTGRES_DB=esbao_bd
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=qwerty
+      - POSTGRES_USER=esbao_db_user
+      - POSTGRES_PASSWORD=KXdHsokGbqQK5fGdvYurj1s4b5hdekC2
     restart: always
     volumes:
       - db-data:/var/lib/postgresql/data
