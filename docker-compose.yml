@@ -25,8 +25,8 @@ services:
       - "5432:5432"
     environment:
       - POSTGRES_DB=esbao_bd
-      - POSTGRES_USER=esbao_db_user
-      - POSTGRES_PASSWORD=KXdHsokGbqQK5fGdvYurj1s4b5hdekC2
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=qwerty
     restart: always
     volumes:
       - db-data:/var/lib/postgresql/data

@@ -50,3 +50,11 @@ bootJar {
 	archiveBaseName = 'prefectura_esbao'
 	archiveVersion = '0.0.1-SNAPSHOT'
 }
+// Configuración adicional para asegurar que el JAR incluya el atributo Main-Class en el manifiesto
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'com.appconsecurity.esbao.EsbaoApplication'
+		)
+	}
+}
