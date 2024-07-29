@@ -6,12 +6,6 @@
 node_modules
 dist
 
-# Ignorar todas las carpetas build excepto los archivos JAR especificados
-build/
-!build/libs/
-!build/libs/esbao-0.0.1-SNAPSHOT-plain.jar
-!build/libs/prefectura_esbao-0.0.1-SNAPSHOT.jar
-
 # Ignorar configuraciones específicas de STS, IntelliJ, NetBeans y VS Code
 ### STS ###
 .apt_generated
