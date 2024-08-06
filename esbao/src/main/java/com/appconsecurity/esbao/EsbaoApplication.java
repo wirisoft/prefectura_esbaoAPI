@@ -37,7 +37,7 @@ public class EsbaoApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("*")
+						.allowedOrigins("http://vps-4243804-x.dattaweb.com")
 						.allowedMethods("*")
 						.allowedHeaders("*");
 			}
