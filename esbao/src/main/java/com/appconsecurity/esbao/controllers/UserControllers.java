@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com")
+//@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com")
 @RestController
 @RequestMapping("/users")
 public class UserControllers {
@@ -20,7 +20,7 @@ public class UserControllers {
     @Autowired
     IUserService userService;
 
-    @CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
+    //@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
     @PostMapping("/create")
     public ResponseEntity<UserEntity> createUser(@RequestBody UserEntity user) {
         try {
@@ -31,7 +31,7 @@ public class UserControllers {
         }
     }
 
-    @CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
+    //@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
     @GetMapping("/get-all")
     public ResponseEntity<List<UserEntity>> getAllUsers() {
         try {
@@ -42,7 +42,7 @@ public class UserControllers {
         }
     }
 
-    @CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
+    //@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
     @GetMapping("/get/{id}")
     public ResponseEntity<UserEntity> getUserById(@PathVariable Long id) {
         try {
@@ -54,7 +54,7 @@ public class UserControllers {
         }
     }
 
-    @CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
+    //@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
     @PutMapping("/update/{id}")
     public ResponseEntity<UserEntity> updateUser(@PathVariable Long id, @RequestBody UserEntity newUser) {
         try {
@@ -68,7 +68,7 @@ public class UserControllers {
         }
     }
 
-    @CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
+    //@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<HashMap<String, String>> deleteUser(@PathVariable Long id) {
         try {
