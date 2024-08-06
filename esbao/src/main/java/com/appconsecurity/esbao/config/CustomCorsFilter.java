@@ -24,7 +24,7 @@ public class CustomCorsFilter extends OncePerRequestFilter {
         String origin = request.getHeader("Origin");
 
         if (allowedOrigins.contains(origin)) {
-            response.setHeader("Access-Control-Allow-Origin", origin);
+            response.setHeader("Access-Control-Allow-Origin", "*");
             response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH, OPTIONS");
             response.setHeader("Access-Control-Allow-Headers", "authorization, content-type, xsrf-token");
             response.setHeader("Access-Control-Expose-Headers", "xsrf-token");
