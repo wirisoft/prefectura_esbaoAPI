@@ -1,10 +1,13 @@
 package com.appconsecurity.esbao;
 
+import com.appconsecurity.esbao.config.CustomCorsFilter;
 import com.appconsecurity.esbao.pdf.BitacoraReportGenerator;
 import com.appconsecurity.esbao.pdf.CitatorioReportGenerator;
 import com.appconsecurity.esbao.persistence.entities.BitacoraEntity;
 import com.appconsecurity.esbao.persistence.repositories.BitacoraRepository;
 import com.appconsecurity.esbao.services.IBitacoraService;
+import jakarta.servlet.FilterRegistration;
+import jakarta.servlet.ServletContext;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,16 +37,15 @@ public class EsbaoApplication {
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**")
-						.allowedOrigins("*") // Permite todos los orígenes, ajusta según sea necesario
-						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-						.allowedHeaders("*")
-						.allowCredentials(true)
-						.maxAge(3600);
-			}
+			// No es necesario agregar configuración aquí si el filtro personalizado está en uso
 		};
+	}
+
+	@Bean
+	public FilterRegistration.Dynamic corsFilterRegistration(ServletContext servletContext) {
+		FilterRegistration.Dynamic registration = servletContext.addFilter("customCorsFilter", new CustomCorsFilter());
+		registration.addMappingForUrlPatterns(null, false, "/*");
+		return registration;
 	}
 
 }

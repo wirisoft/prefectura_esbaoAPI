@@ -20,7 +20,7 @@ public class UserControllers {
     @Autowired
     IUserService userService;
 
-    
+
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/create")
     public ResponseEntity<UserEntity> createUser(@RequestBody UserEntity user) {
