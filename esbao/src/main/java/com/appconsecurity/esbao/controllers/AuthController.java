@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://vps-4292454-x.dattaweb.com", allowCredentials = "true")
 public class AuthController {
 
     private final IAuthService authService;
