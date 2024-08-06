@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com")
+//@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com")
 @RestController
 @RequestMapping("/api/pdf")
 public class ReportController {
