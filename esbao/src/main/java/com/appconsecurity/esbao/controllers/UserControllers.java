@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-//@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com")
+@CrossOrigin
 @RestController
 @RequestMapping("/users")
 public class UserControllers {
