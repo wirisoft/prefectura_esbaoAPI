@@ -37,9 +37,10 @@ public class EsbaoApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("http://vps-4243804-x.dattaweb.com:8080")
-						.allowedMethods("*")
-						.allowedHeaders("*");
+						.allowedOrigins("http://vps-4292454-x.dattaweb.com")
+						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+						.allowedHeaders("*")
+						.allowCredentials(true);
 			}
 		};
 	}
