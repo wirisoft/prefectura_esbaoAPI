@@ -21,7 +21,7 @@ public class UserControllers {
     IUserService userService;
 
 
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    
     @PostMapping("/create")
     public ResponseEntity<UserEntity> createUser(@RequestBody UserEntity user) {
         try {
@@ -32,7 +32,7 @@ public class UserControllers {
         }
     }
 
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
+
     @GetMapping("/get-all")
     public ResponseEntity<List<UserEntity>> getAllUsers() {
         try {
@@ -43,7 +43,7 @@ public class UserControllers {
         }
     }
 
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
+
     @GetMapping("/get/{id}")
     public ResponseEntity<UserEntity> getUserById(@PathVariable Long id) {
         try {
@@ -55,7 +55,7 @@ public class UserControllers {
         }
     }
 
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
+
     @PutMapping("/update/{id}")
     public ResponseEntity<UserEntity> updateUser(@PathVariable Long id, @RequestBody UserEntity newUser) {
         try {
@@ -69,7 +69,7 @@ public class UserControllers {
         }
     }
 
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<HashMap<String, String>> deleteUser(@PathVariable Long id) {
         try {
