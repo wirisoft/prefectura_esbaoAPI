@@ -16,7 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "*") // Permite todas las solicitudes de cualquier origen
+@CrossOrigin(origins = "*")
 public class AuthController {
 
     private final IAuthService authService;
