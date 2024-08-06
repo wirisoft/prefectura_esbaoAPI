@@ -31,19 +31,15 @@ public class EsbaoApplication {
 		SpringApplication.run(EsbaoApplication.class, args);
 	}
 
-//	@Bean
-//	public WebMvcConfigurer corsConfigurer() {
-//		return new WebMvcConfigurer() {
-//			@Override
-//			public void addCorsMappings(CorsRegistry registry) {
-//				registry.addMapping("/**")
-//						.allowedOrigins("http://vps-4292454-x.dattaweb.com:8080", "http://vps-4243804-x.dattaweb.com", "http://vps-4292454-x.dattaweb.com")
-//						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-//						.allowedHeaders("*")
-//						.allowCredentials(true);
-//			}
-//		};
-//	}
+	@Bean
+	WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("*").allowedMethods("*").allowedHeaders("*");
+			}
+		};
+	}
 
 }
 
