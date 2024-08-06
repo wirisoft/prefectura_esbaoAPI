@@ -31,7 +31,7 @@ public class UserControllers {
         }
     }
 
-    //@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
+    @CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080")
     @GetMapping("/get-all")
     public ResponseEntity<List<UserEntity>> getAllUsers() {
         try {
@@ -42,7 +42,7 @@ public class UserControllers {
         }
     }
 
-    //@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080/users")
+    @CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com:8080")
     @GetMapping("/get/{id}")
     public ResponseEntity<UserEntity> getUserById(@PathVariable Long id) {
         try {
