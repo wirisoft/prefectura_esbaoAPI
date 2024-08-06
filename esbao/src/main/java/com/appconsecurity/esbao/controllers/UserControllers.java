@@ -21,7 +21,7 @@ public class UserControllers {
     IUserService userService;
 
 
-    
+
     @PostMapping("/create")
     public ResponseEntity<UserEntity> createUser(@RequestBody UserEntity user) {
         try {
