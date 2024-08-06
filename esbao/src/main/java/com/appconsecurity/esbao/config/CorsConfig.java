@@ -19,10 +19,15 @@ import java.io.IOException;
 @EnableWebMvc
 public class CorsConfig implements WebMvcConfigurer {
 
+    private static final String[] ALLOWED_ORIGINS = {
+            "http://vps-4292454-x.dattaweb.com:8080",
+            "http://vps-4243804-x.dattaweb.com"
+    };
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://vps-4292454-x.dattaweb.com:8080", "http://vps-4243804-x.dattaweb.com")
+                .allowedOrigins(ALLOWED_ORIGINS)
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                 .allowedHeaders("*")
                 .exposedHeaders("Authorization")
@@ -33,10 +38,9 @@ public class CorsConfig implements WebMvcConfigurer {
     @Bean
     public FilterRegistrationBean<CustomCorsFilter> corsFilter() {
         FilterRegistrationBean<CustomCorsFilter> registrationBean = new FilterRegistrationBean<>();
-        registrationBean.setFilter(new CustomCorsFilter());
+        registrationBean.setFilter(new CustomCorsFilter(ALLOWED_ORIGINS));
         registrationBean.addUrlPatterns("/*");
         return registrationBean;
     }
-
 
 }
