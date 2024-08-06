@@ -55,7 +55,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
             throw new RuntimeException(e);
         }
 
-    filterChain.doFilter(request, response);
+        filterChain.doFilter(request, response);
 
     }
 }
