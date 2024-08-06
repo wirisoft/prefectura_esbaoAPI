@@ -14,9 +14,9 @@ import java.util.HashMap;
 import java.util.Optional;
 
 
+@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com")
 @RestController
 @RequestMapping("/auth")
-//@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com")
 public class AuthController {
 
     private final IAuthService authService;

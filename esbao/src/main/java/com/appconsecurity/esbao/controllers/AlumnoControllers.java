@@ -11,9 +11,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://vps-4243804-x.dattaweb.com")
 @RestController
 @RequestMapping("/api/alumno")
-@CrossOrigin(origins = "http://200.58.106.203:80")
 public class AlumnoControllers {
 
     @Autowired
