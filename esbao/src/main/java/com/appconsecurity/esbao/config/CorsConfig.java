@@ -19,29 +19,24 @@ import java.io.IOException;
 @EnableWebMvc
 public class CorsConfig implements WebMvcConfigurer {
 
-//    private static final String[] ALLOWED_ORIGINS = {
-//
-//    };
-//
-//    @Override
-//    public void addCorsMappings(CorsRegistry registry) {
-//        registry.addMapping("/**")
-//                .allowedOrigins("http://vps-4292454-x.dattaweb.com:8080",
-//                        "http://vps-4243804-x.dattaweb.com",
-//                        "http://localhost:8100")
-//                .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
-//                .allowedHeaders("*")
-//                .exposedHeaders("Authorization")
-//                .allowCredentials(true)
-//                .maxAge(3600);
-//    }
-//
-//    @Bean
-//    public FilterRegistrationBean<CustomCorsFilter> corsFilter() {
-//        FilterRegistrationBean<CustomCorsFilter> registrationBean = new FilterRegistrationBean<>();
-//        registrationBean.setFilter(new CustomCorsFilter(ALLOWED_ORIGINS));
-//        registrationBean.addUrlPatterns("/*");
-//        return registrationBean;
-//    }
+
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry){
+        registry.addMapping("/**")
+                .allowedOrigins("http://localhost:8100", "https://wirisoft-bcb34.web.app",  "http://200.58.106.203", "http://vps-4292454-x.dattaweb.com", "http://vps-4292454-x.dattaweb.com:8080")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("Origin", "Content-Type", "Accept", "Authorization")
+                .allowCredentials(true)
+                .maxAge(3600);
+
+
+        registry.addMapping("/auth/**")
+                .allowedOrigins("*")
+                .allowedMethods("OPTIONS", "POST")
+                .allowedHeaders("Origin", "Content-Type", "Accept", "Authorization")
+                .allowCredentials(false)
+                .maxAge(3600);
+    }
 
 }
