@@ -13,6 +13,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
+import java.util.Arrays;
+
+import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 @EnableWebSecurity
@@ -24,27 +31,32 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http
-                .csrf(csrf ->
-                        csrf.disable()
-                        )
-                .authorizeHttpRequests(authRequest ->
-                                authRequest
-                                        .requestMatchers("/auth/**").permitAll()
-                                                .anyRequest().authenticated()
-
+        http
+                .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Configuración de CORS
+                .csrf(csrf -> csrf.disable()) // Deshabilitar CSRF
+                .authorizeRequests(authorize -> authorize
+                        .anyRequest().authenticated() // Configuración de autorización
                 )
-                .sessionManagement(sessionManager ->
-                        sessionManager
-                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                        )
-                .addFilterBefore(new JWTAuthorizationFilter(jwtUtilityService),UsernamePasswordAuthenticationFilter.class)
-                .exceptionHandling(exceptionHandling ->
-                        exceptionHandling
-                                .authenticationEntryPoint((request, response, authException) -> {
-                                    response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
-                                }))
-                .build();
+                .formLogin(withDefaults()); // Configuración de inicio de sesión
+
+        return http.build();
+    }
+
+    @Bean
+    public UrlBasedCorsConfigurationSource corsConfigurationSource() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowCredentials(true);
+        config.setAllowedOrigins(Arrays.asList(
+                "http://vps-4292454-x.dattaweb.com",
+                "https://vps-4292454-x.dattaweb.com",
+                "http://200.58.106.203",
+                "https://200.58.106.203"
+        ));
+        config.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        source.registerCorsConfiguration("/**", config);
+        return source;
     }
 
     @Bean
