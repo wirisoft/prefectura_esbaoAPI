@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.appconsecurity.esbao.EsbaoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-07T10:39:24" hostname="MARTINLAP" time="0.51">
+<testsuite name="com.appconsecurity.esbao.EsbaoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-07T10:55:52" hostname="MARTINLAP" time="0.55">
   <properties/>
-  <testcase name="contextLoads()" classname="com.appconsecurity.esbao.EsbaoApplicationTests" time="0.51"/>
+  <testcase name="contextLoads()" classname="com.appconsecurity.esbao.EsbaoApplicationTests" time="0.55"/>
   <system-out><![CDATA[Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
-04:39:14.079 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appconsecurity.esbao.EsbaoApplicationTests]: EsbaoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-04:39:14.199 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appconsecurity.esbao.EsbaoApplication for test class com.appconsecurity.esbao.EsbaoApplicationTests
+04:55:35.506 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appconsecurity.esbao.EsbaoApplicationTests]: EsbaoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+04:55:35.752 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appconsecurity.esbao.EsbaoApplication for test class com.appconsecurity.esbao.EsbaoApplicationTests
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -14,31 +14,31 @@
 
  :: Spring Boot ::                (v3.3.0)
 
-2024-08-07T04:39:14.702-06:00  INFO 24372 --- [esbao] [    Test worker] c.a.esbao.EsbaoApplicationTests          : Starting EsbaoApplicationTests using Java 17.0.11 with PID 24372 (started by martinelwiri in C:\Users\misju\Documents\esbao\esbao)
-2024-08-07T04:39:14.703-06:00  INFO 24372 --- [esbao] [    Test worker] c.a.esbao.EsbaoApplicationTests          : No active profile set, falling back to 1 default profile: "default"
-2024-08-07T04:39:15.581-06:00  INFO 24372 --- [esbao] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-07T04:39:15.704-06:00  INFO 24372 --- [esbao] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 5 JPA repository interfaces.
-2024-08-07T04:39:16.326-06:00  INFO 24372 --- [esbao] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-07T04:39:16.409-06:00  INFO 24372 --- [esbao] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-07T04:39:16.472-06:00  INFO 24372 --- [esbao] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-07T04:39:16.914-06:00  INFO 24372 --- [esbao] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-07T04:39:16.948-06:00  INFO 24372 --- [esbao] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-07T04:39:18.257-06:00  INFO 24372 --- [esbao] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6282f1eb
-2024-08-07T04:39:18.259-06:00  INFO 24372 --- [esbao] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-07T04:39:18.398-06:00  WARN 24372 --- [esbao] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-07T04:39:19.709-06:00  INFO 24372 --- [esbao] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-07T04:39:23.198-06:00  INFO 24372 --- [esbao] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-07T04:39:23.545-06:00  INFO 24372 --- [esbao] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-08-07T04:39:23.668-06:00  WARN 24372 --- [esbao] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-07T04:39:24.134-06:00  WARN 24372 --- [esbao] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+2024-08-07T04:55:36.446-06:00  INFO 12908 --- [esbao] [    Test worker] c.a.esbao.EsbaoApplicationTests          : Starting EsbaoApplicationTests using Java 17.0.11 with PID 12908 (started by martinelwiri in C:\Users\misju\Documents\esbao\esbao)
+2024-08-07T04:55:36.449-06:00  INFO 12908 --- [esbao] [    Test worker] c.a.esbao.EsbaoApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2024-08-07T04:55:38.195-06:00  INFO 12908 --- [esbao] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07T04:55:38.426-06:00  INFO 12908 --- [esbao] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201 ms. Found 5 JPA repository interfaces.
+2024-08-07T04:55:39.857-06:00  INFO 12908 --- [esbao] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07T04:55:40.018-06:00  INFO 12908 --- [esbao] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-07T04:55:40.090-06:00  INFO 12908 --- [esbao] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-07T04:55:43.495-06:00  INFO 12908 --- [esbao] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07T04:55:43.546-06:00  INFO 12908 --- [esbao] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-07T04:55:44.917-06:00  INFO 12908 --- [esbao] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6282f1eb
+2024-08-07T04:55:44.918-06:00  INFO 12908 --- [esbao] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-07T04:55:45.055-06:00  WARN 12908 --- [esbao] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-07T04:55:47.276-06:00  INFO 12908 --- [esbao] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07T04:55:50.527-06:00  INFO 12908 --- [esbao] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07T04:55:51.386-06:00  INFO 12908 --- [esbao] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-07T04:55:51.544-06:00  WARN 12908 --- [esbao] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07T04:55:52.145-06:00  WARN 12908 --- [esbao] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: b2d52f14-dbdf-4f2d-b562-99017815a6f1
+Using generated security password: 6c4bc158-9c40-427a-9f34-faa004c33455
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2024-08-07T04:39:24.145-06:00  INFO 24372 --- [esbao] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2024-08-07T04:39:24.278-06:00  INFO 24372 --- [esbao] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@653c0c9c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5276330a, org.springframework.security.web.context.SecurityContextHolderFilter@6a77953c, org.springframework.security.web.header.HeaderWriterFilter@1df60140, org.springframework.web.filter.CorsFilter@221961f2, org.springframework.security.web.authentication.logout.LogoutFilter@731bdcca, com.appconsecurity.esbao.security.JWTAuthorizationFilter@541d8a9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a458c73, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55854382, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51c0346d, org.springframework.security.web.session.SessionManagementFilter@3638120f, org.springframework.security.web.access.ExceptionTranslationFilter@365eaef, org.springframework.security.web.access.intercept.AuthorizationFilter@42ceb67f]
-2024-08-07T04:39:24.654-06:00  INFO 24372 --- [esbao] [    Test worker] c.a.esbao.EsbaoApplicationTests          : Started EsbaoApplicationTests in 10.246 seconds (process running for 11.592)
+2024-08-07T04:55:52.166-06:00  INFO 12908 --- [esbao] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2024-08-07T04:55:52.353-06:00  INFO 12908 --- [esbao] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@653c0c9c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5276330a, org.springframework.security.web.context.SecurityContextHolderFilter@6a77953c, org.springframework.security.web.header.HeaderWriterFilter@1df60140, org.springframework.web.filter.CorsFilter@221961f2, org.springframework.security.web.authentication.logout.LogoutFilter@731bdcca, com.appconsecurity.esbao.security.JWTAuthorizationFilter@541d8a9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a458c73, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55854382, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51c0346d, org.springframework.security.web.session.SessionManagementFilter@3638120f, org.springframework.security.web.access.ExceptionTranslationFilter@365eaef, org.springframework.security.web.access.intercept.AuthorizationFilter@42ceb67f]
+2024-08-07T04:55:52.879-06:00  INFO 12908 --- [esbao] [    Test worker] c.a.esbao.EsbaoApplicationTests          : Started EsbaoApplicationTests in 16.846 seconds (process running for 18.829)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
